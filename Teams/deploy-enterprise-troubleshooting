@@ -1,0 +1,208 @@
+# Mac Teams Desktop sedimentation
+
+There are two high-level problems with updates we are currently seeing with Mac Teams Desktop client:
+
+1. Clients do not update to latest builds at all, regardless of ring.
+2. Ring 1.5 and Ring 3 clients do not update to latest of their ring, but only to latest R4.
+
+## Clients do not update to latest builds at all
+
+Investigation shows that majority of the problems are caused by MAU not being installed/allowed on machine or use of custom MAU profile, that is wrongly configured.
+
+Why do admins have custom MAU profiles? you might ask. Luckily, it’s often due to good intentions. MAU has few settings like channels and, most importantly, update strategy. Most of the admins have custom profiles to mandate auto-download and auto-install, so they ensure applications are always up to date. If they don’t have this, users control those settings and can postpone updates.
+
+After talking to multiple tenant admins and reviewing incidents and logs, here’s list of most common issues:
+
+- MAU is not installed
+- Admins need to install and configure MAU
+- [MAU Preferences](https://learn.microsoft.com/en-us/microsoft-365-apps/mac/mau-preferences)
+
+### TEAMS is not configured
+
+Admins have MAU and custom configuration, but Teams is missing. Typically, such profile would look like this:
+
+```xml
+<dict>
+    <key>PayloadType</key>
+    <string>com.microsoft.autoupdate2</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.microsoft.autoupdate2.DB97AA26-FD3C-4E1D-9043-8FADE74D9EA2</string>
+    <key>PayloadEnabled</key>
+    <true/>
+    <key>PayloadUUID</key>
+    <string>DB97AA26-FD3C-4E1D-9043-8FADE74D9EA2</string>
+    <key>AcknowledgedDataCollectionPolicy</key>
+    <string>RequiredDataOnly</string>
+    <key>HowToCheck</key>
+    <string>AutomaticDownload</string>
+    <key>StartDaemonOnAppLaunch</key>
+    <true/>
+    <key>EnableCheckForUpdatesButton</key>
+    <true/>
+    <key>ChannelName</key>
+    <string>Production</string>
+    <key>Applications</key>
+    <dict>
+        <key>/Applications/Microsoft Excel.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>XCEL2019</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft OneNote.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>ONMC2019</string>
+            <key>LCID</key>
+            <string>1033</string>
+        </dict>
+        <key>/Applications/Microsoft Outlook.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>OPIM2019</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft PowerPoint.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>PPT32019</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft Word.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>MSWD2019</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft Remote Desktop.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>MSRD10</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Company Portal.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>IMCP01</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>MSau04</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft Defender ATP.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>WDAV00</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+        <key>/Applications/Microsoft Edge.app</key>
+        <dict>
+            <key>Application ID</key>
+            <string>EDGE01</string>
+            <key>LCID</key>
+            <integer>1033</integer>
+        </dict>
+    </dict>
+</dict>
+Solution, make sure to add Teams setting:
+
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+TEAMS is mis-configured
+Most typical cases are:
+
+T1 configuration:
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS10</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+T21 configuration with old name:
+<key>/Applications/Microsoft Teams (work or school).app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+Duplicate configurations for T1 and T2.1:
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS10</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+Plus there are cases of typos etc.
+
+Solution, make sure Teams Classic setting is removed and correct New Teams is used:
+
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+Configuration is correct, but Teams is old
+This is a special case where admins may have set up correct Teams configuration like this:
+
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+But they still have really old builds, which have old name – Microsoft Teams (work or school).app.
+
+In this case, MAU will not match the app and will not update.
+
+Solution – still figuring out best one, options so far are:
+
+Query DeviceIDs/Tenants with old name and ask Admins to manually force update to latest, which will rename them.
+Ask admins to temporarily configure MAU to match the name and once we/they confirm updates are successful, they can move back to new name.
+Ring 1.5 and Ring 3 clients do not update to latest of their ring
+This particular issue is happening only to those tenants that serve custom MAU profile. If they do not do that, Teams registerers itself correctly and updates to latest build per ring.
+
+If admins opt-in to use custom profile, and if they use correct New Teams registration like this:
+
+<key>/Applications/Microsoft Teams.app</key>
+<dict>
+    <key>Application ID</key>
+    <string>TEAMS21</string>
+    <key>LCID</key>
+    <integer>1033</integer>
+</dict>
+They basically tell MAU to download latest R4 build. MAU has notion of channels, but right now we point all channels to R4.
+
+Solution for this is to use Preview Channel for R3 and Beta channel for R1.5 users. This will allow IT admins to specify channel in their profile and get correct updates. Minor note – channels are updated after ring goes 100%, so they will not be part of phased rollouts/experiments – but this is no change to what happens currently.
+
+We have dependency on Office (RDX) team to update their pipeline Metadata MAU - Metadata MAU - 24165.1406.2974.9471 (1) - Pipelines (visualstudio
