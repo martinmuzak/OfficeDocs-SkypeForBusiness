@@ -46,9 +46,12 @@ When you run the PowerShell script, the data is exported to a CSV file that can 
    
 1. The script prompts will guide you through the process:
 
-   - Wait for the script to detect and gather information about the connected devices.
-   - Connect the external devices when prompted.
-   - Enter the required details such as User Principal Name (UPN), Display Name, and Grouping ID for data collection when prompted.
+   - Wait for the script to detect and gather information about internal peripherals. The waiting period is essential for the script to make sure it establishes a baseline between internal and externally connected peripherals.
+      
+   - Connect the external peripherals when prompted.
+      
+   - Enter the required details for data collection when prompted. At minimum, a product ID, vendor ID, and serial number is required, but we highly suggest filling out the other fields - especially the Account field so as to properly associate the peripheral with the right room or desk account.
+      
    - Provide the folder path where the PERIPHERALS.csv file will be saved when prompted.
    - The script will process the discovered peripheral data and export it to the specified file path.
       
