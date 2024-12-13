@@ -59,8 +59,8 @@ When you run the PowerShell script, the data is exported to a CSV file that can 
 1. Save the CSV file in .XLSX format. The first sheet in the CSV file must be titled **PERIPHERALS**.
 
    > [!IMPORTANT]
-   > If sensitivity labels are enabled in your tenant, verify that the Excel file has a label of non-business, public, or general.  
-
+   > If sensitivity labels are enabled in your tenant, verify that the Excel file has a label of non-business, public, or general. Any other more confidential setting will cause the import to fail.
+   
 1. Sign in and open the [Microsoft Teams Pro Management portal](https://portal.rooms.microsoft.com/), in the **Devices** page, select __Import__ to add the device inventory to upload the file you modified.
 
 1. Verify that the device and desk association is updated successfully in the Teams Pro Management portal.
