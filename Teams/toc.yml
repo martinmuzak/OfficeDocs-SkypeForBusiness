@@ -1842,7 +1842,7 @@ items:
             - name: Set up Assignments in Teams
               href: expand-teams-across-your-org/assignments-in-teams.md
             - name: Classwork in Teams for Education
-              href: classwork-teams-education.md
+              href: expand-teams-across-your-org/classwork-teams-education.md
             - name: Set up Parent Connection in Teams
               href: edu-parents-app.md
         - name: LMS and LTI integrations
