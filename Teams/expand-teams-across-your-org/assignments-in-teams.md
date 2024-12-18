@@ -1,7 +1,7 @@
 ---
 title: Assignments for Teams
-author: MicrosoftHeidi
-ms.author: heidip
+author: DaniEASmith
+ms.author: danismith
 manager: jtremper
 ms.topic: article
 ms.service: msteams
