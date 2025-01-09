@@ -19,82 +19,73 @@ ms.localizationpriority: medium
 description: Learn how to set the user interface on Teams Android devices.
 ---
 
-# Set Microsoft Teams Phone device user interface
+In this article 
 
-Microsoft Teams Android devices can display a specific user interface based on the type of license assigned to the signed-in account. You can override this behavior and control which interface is shown. This article details how the default user interface is chosen and how you can change the interface using a Powershell policy.
+Configure Queues app for users in your organization  
 
-There are three types of user interfaces on Teams Phone devices:
+Queues app behavior on Teams phone devices  
 
-1. User
-2. Common Area
-3. Meeting
+Related articles  
 
-If you [assign a user license](/microsoftteams/user-access) to an account, like an E3 or an E5 license, the Teams device will display the default end-user interface which is fully featured for most user scenarios. However, if a device is performing a specific function, such as a common area phone or a meeting room, there are specific user interfaces for these usages.
+Queues app is a Teams native solution designed to empower organizations to streamline their customer engagement. With the latest [release](https://support.microsoft.com/en-us/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2) of Teams app version: 1449/1.0.94.2024122303, Queues app is now supported for Teams phone devices in addition to Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients. 
 
-The following three images show how the user interface changes based on the license assigned to the user account.
+Configure Queues app for users in your organization, please refer to this article - [Manage Queues app for Microsoft Teams - Microsoft Teams | Microsoft Learn](/microsoftteams/manage-queues-app) 
 
-## End-user interface
+ Support of Queues app on Teams phone devices unlocks seamless call queue management for agents with the following functionalities: 
 
-The user account is assigned an E5 license. This is a user license, so the device shows the default end-user interface:
+View all call queues wherein authorized users can opt-in/opt-out all the call queues.  
 
-:::image type="content" source="../media/teams-android-devices-usermode1.jpg" alt-text="User mode interface.":::
+Interact with your team members that are grouped by their opt in/opt out status. To initiate a call, simply select a team member from the menu. 
 
-## Common area interface
+Place outgoing calls and in case your organization has multiple outbound numbers to choose from, choose which number you’d like to place outbound calls with. 
 
-In this image, the user account has been assigned a [Microsoft Teams Shared Devices license](/microsoftteams/teams-add-on-licensing/teams-shared-device-license). Common area phones are primarily used for making and receiving phone calls. As such, the dial pad is shown on the display:
+View past calls, including calls you may have missed; you can select any call in your history to see more detailed information and call that number back using the number associated with your call queue. Currently, call history includes the past calls that you have picked up or calls that you have missed that have a voicemail.   
 
-:::image type="content" source="../media/teams-android-devices-cap1.jpg" alt-text="Common area phone interface.":::
+Note: Queues app on Teams phone devices does not support real-time analytics and historical reporting. To utilize those functionalities, use the Queues app on Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients.   
 
-Optionally, you can enable [Advanced Calling](/microsoftteams/set-up-common-area-phones) interface or [Hotline (Private Line Auto Ringdown)](/microsoftteams/set-up-common-area-phones) interface on common area phones. 
+Related articles 
 
-## Meeting interface
+[Manage Queues app for Microsoft Teams - Microsoft Teams | Microsoft Learn](/microsoftteams/manage-queues-app) 
 
-This image shows a user account with a [Microsoft Teams Rooms license](/MicrosoftTeams/rooms/rooms-licensing) assigned. Teams Rooms licenses are meant to be used in meeting rooms or shared spaces, so the user interface changes to make it easy to join a meeting by showing the calendar view:
+[Use the Queues app for Microsoft Teams - Microsoft Support](https://support.microsoft.com/en-us/office/use-the-queues-app-for-microsoft-teams-370ad83e-c2c1-4a9f-8a59-16c98be102e9)  
 
-:::image type="content" source="../media/teams-android-devices-meeting.jpg" alt-text="Meeting interface.":::
+[https://learn.microsoft.com/en-us/microsoftteams/aa-cq-authorized-users-plan](https://learn.microsoft.com/en-us/microsoftteams/aa-cq-authorized-users-plan)  
 
-> [!IMPORTANT]
-> There are other elements of the interface that change. For example, to prevent end-users from signing out of a common area phone or meeting room device, the "Sign out" option on these devices is moved to a part of the settings menu that requires administrator permissions to access.
+[https://learn.microsoft.com/en-us/microsoftteams/policy-assignment-overview](https://learn.microsoft.com/en-us/microsoftteams/policy-assignment-overview)  
 
-## Override automatic user interface detection
+- [https://learn.microsoft.com/en-us/microsoftteams/teams-add-on-licensing/licensing-enhance-teams](https://learn.microsoft.com/en-us/microsoftteams/teams-add-on-licensing/licensing-enhance-teams)In this article 
 
-In some cases, you may choose to assign a license to an account that doesn't match its intended use. For example, you may assign a user license to an account meant to sign in to Teams Rooms on Android. By default, you would see the end-user interface instead of the meeting room interface. To override the default interface, create a new [Teams IP Phone Policy](/powershell/module/teams/new-csteamsipphonepolicy) and apply to it to that account.  
-
-> [!NOTE]
-> The license assigned to the user account must have at least the same license entitlements as the desired user interface. The **Microsoft Teams Shared Devices** license only allows the common area phone user interface. The **Teams Rooms** license only allows meeting room interfaces. An E3 or E5 license supports all sign-in modes. Learn more about [deploying Teams Phone devices](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/how-to-deploy-teams-phone-devices/ba-p/3994979). 
-The following is an example of how to override automatic license detection. In this example, assume that a meeting room resource account named conf-adams@contoso.com has been assigned an E3 license. When this account is signed-in, you want users to see the meeting room user interface.
-
-### Create a new policy and assign to user
-
-1. Start a remote Windows PowerShell session and connect to Microsoft Teams using the following cmdlet:
-
-    ``` Powershell
-    Connect-MicrosoftTeams
-    ```
-
-2. Create a new Teams IP Phone policy and set the sign-in mode to "MeetingSignIn":
-
-   ``` Powershell
-   New-CsTeamsIPPhonePolicy –Identity 'Meeting Sign in' –Description 'Meeting Sign In Phone Policy' -SignInMode 'MeetingSignIn'
-
-   ```
-
-3. You can now assign this new policy to the meeting room resource account:
-
-   ``` Powershell
-   Grant-CsTeamsIPPhonePolicy –Identity 'conf-adams@contoso.com' –PolicyName 'Meeting Sign In'
-   ```
-
-After granting the policy to the meeting room resource account, you'll need to wait for the policy assignment to replicate. You'll also need to sign out of the device and sign back in.
-
-## Impact on Microsoft Teams admin center
-
-Microsoft Teams admin center allows you to manage Microsoft Teams devices. For more information on managing devices using Teams admin center, see [Manage your devices in Microsoft Teams](../devices/device-management.md).
-
-Teams admin center provides the ability to manage Teams phones. Phones are filtered into one of three tabs based on their function: user phones, common area phones, and conference phone.
-
- :::image type="content" source="../media/teams-admin-center-phones-header.png" alt-text="Phones header in Teams admin center.":::
-
-As with the user interface detection, Teams phones are categorized based on the license assigned to the account signing in to the phone. For example, if an account that is assigned a **Microsoft Teams Shared Devices** license signs in to a phone, then that phone will be shown in both the default **All phones** section as well as in the **Common area phones** section.
-
-If you would like a phone to appear in a different section, you can either assign a different license to the phone, or create and assign a Teams IP Phone policy as [described above](#override-automatic-user-interface-detection).
+  Configure Queues app for users in your organization  
+  
+  Queues app behavior on Teams phone devices  
+  
+  Related articles  
+  
+  Queues app is a Teams native solution designed to empower organizations to streamline their customer engagement. With the latest [release](https://support.microsoft.com/en-us/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2) of Teams app version: 1449/1.0.94.2024122303, Queues app is now supported for Teams phone devices in addition to Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients. 
+  
+  Configure Queues app for users in your organization, please refer to this article - [Manage Queues app for Microsoft Teams - Microsoft Teams | Microsoft Learn](/microsoftteams/manage-queues-app) 
+  
+   Support of Queues app on Teams phone devices unlocks seamless call queue management for agents with the following functionalities: 
+  
+  - View all call queues wherein authorized users can opt-in/opt-out all the call queues.  
+  
+  - Interact with your team members that are grouped by their opt in/opt out status. To initiate a call, simply select a team member from the menu. 
+  
+  - Place outgoing calls and in case your organization has multiple outbound numbers to choose from, choose which number you’d like to place outbound calls with. 
+  
+  - View past calls, including calls you may have missed; you can select any call in your history to see more detailed information and call that number back using the number associated with your call queue. Currently, call history includes the past calls that you have picked up or calls that you have missed that have a voicemail.   
+  
+  Note: Queues app on Teams phone devices does not support real-time analytics and historical reporting. To utilize those functionalities, use the Queues app on Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients.   
+  
+  Related articles 
+  
+  - [Manage Queues app for Microsoft Teams - Microsoft Teams | Microsoft Learn](/microsoftteams/manage-queues-app) 
+  
+  - [Use the Queues app for Microsoft Teams - Microsoft Support](https://support.microsoft.com/en-us/office/use-the-queues-app-for-microsoft-teams-370ad83e-c2c1-4a9f-8a59-16c98be102e9)  
+  
+  - [https://learn.microsoft.com/en-us/microsoftteams/aa-cq-authorized-users-plan](https://learn.microsoft.com/en-us/microsoftteams/aa-cq-authorized-users-plan)  
+  
+  - [https://learn.microsoft.com/en-us/microsoftteams/policy-assignment-overview](https://learn.microsoft.com/en-us/microsoftteams/policy-assignment-overview)  
+  
+  - [https://learn.microsoft.com/en-us/microsoftteams/teams-add-on-licensing/licensing-enhance-teams](https://learn.microsoft.com/en-us/microsoftteams/teams-add-on-licensing/licensing-enhance-teams) 
+  
