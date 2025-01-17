@@ -1,5 +1,5 @@
 ---
-title: Setup Classwork in Teams for Education
+title: Set up Classwork in Teams for Education
 author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Teams
 ---
 
-# Setup Classwork in Teams for Education
+# Set up Classwork in Teams for Education
 
 The Classwork feature in Teams for Education allows educators to create and organize class resources, including Assignments, OneNote Class Notebook pages, web links, files, and Teams channels. With Classwork, educators can curate a view of content and resources that will help students navigate a class and see everything in one place.
 
