@@ -26,7 +26,7 @@ The Classwork feature in Teams for Education allows educators to create and orga
 
 ### Permission support
 
-For details about delegated and application permissions, see [Permission types](/graph/permissions-overview.md). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+For details about delegated and application permissions, see [Permission types](/graph/permissions-overview). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 #### EduCurricula.Read
 
