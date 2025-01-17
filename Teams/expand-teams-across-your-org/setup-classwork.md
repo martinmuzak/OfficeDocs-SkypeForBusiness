@@ -1,5 +1,5 @@
 ---
-title: Classwork in Teams for Education
+title: Setup Classwork in Teams for Education
 author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
@@ -18,13 +18,15 @@ appliesto:
   - Microsoft Teams
 ---
 
-# Classwork in Teams for Education
+# Setup Classwork in Teams for Education
 
 The Classwork feature in Teams for Education allows educators to create and organize class resources, including Assignments, OneNote Class Notebook pages, web links, files, and Teams channels. With Classwork, educators can curate a view of content and resources that will help students navigate a class and see everything in one place.
 
 [Learn more about Classwork Teams for Education](https://support.microsoft.com/topic/8a7f61e2-09ef-4fc9-8c16-c0e1a07166dd#ID0EBD=Manage_course_content).
 
 ### Permission support
+
+For details about delegated and application permissions, see [Permission types](/graph/permissions-overview.md). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 #### EduCurricula.Read
 
@@ -67,3 +69,10 @@ The Classwork feature in Teams for Education allows educators to create and orga
 | DisplayText | Read and write all class modules and resources | - |
 | Description | Allows the app to read and write all modules and resources, without a signed-in user. | - |
 | AdminConsentRequired | Yes | - |
+
+### Remove Classwork for a specific user or your entire tenant
+
+To remove Classwork for an individual user, go to the **Teams Admin Center** and navigate to **Teams apps** > **Permission policies** to create a new app permission policy definition. When creating the new policy definition, set the **Microsoft apps** policy to **Block specific apps and allow all others** and add **Classwork** to the list of blocked applications. Once your new policy definition is saved, assign it to the appropriate users.
+
+To remove Classwork for your entire tenant, go to **Teams Admin Center**, navigate to **Teams apps** > **Manage apps**, and search for and select **Classwork** from the application list. Change the status setting within the application's settings page to **Blocked**.
+
