@@ -71,7 +71,7 @@ In the **Inventory** page, you'll find all the BYOD rooms and peripherals within
 The summary metrics show how many rooms of each type you have in your organization.
 
 > [!IMPORTANT]
-> A BYOD room is defined as any room that does not have a meeting enabled compute. In the Pro Management portal specifically, that means **any room that does not have a Microsoft Teams Room** or Surface Hub. These rooms may or may not have peripherals associated to them. These rooms are pulled from the Microsoft Admin Center and Exchange. A BYOD room that is hidden in the GAL will not appear in this view, nor is it manageble via the Pro Management portal.
+> A BYOD room is defined as any room that does not have a meeting enabled compute. In the Pro Management portal specifically, that means **any room that does not have a Microsoft Teams Room** or Surface Hub. These rooms may or may not have peripherals associated to them. These rooms are pulled from the Microsoft Admin Center and Exchange. A BYOD room that is hidden in the GAL will not appear in this view, nor is it manageable via the Pro Management portal.
 
 - The following table describes the columns in the **Rooms** view of the Inventory. The Monitored and Planned columns are not relevant for BYOD rooms.
 
@@ -116,7 +116,7 @@ When you select a specific room, you'll see a new pane with two different pages,
 
 The Device page offers a flat, searchable list of both BYOD and Bookable desk peripherals.
 
-The peripherals are grouped by plug-in, which means if they are plugged in together, they are displayed as a group with the first device name as the primary device shown in the main table. When a peripheral is manually associated with a room, all of the other peripherals in it's group also associate to that room.<br>
+The peripherals are grouped by plug-in, which means if they are plugged in together, they are displayed as a group with the first device name as the primary device shown in the main table. When a peripheral is manually associated with a room, all of the other peripherals in its group also associate to that room.<br>
 The **Number of devices** column shows the number of peripherals in the group.
 
 Select the device to either view more details about peripherals in that group, or manually associate that group to a BYOD room or bookable desk.
@@ -159,7 +159,7 @@ An auto associated room or peripheral is denoted by the blue sparkle iconography
 
 ![Auto Association L1](media/bring-your-own-device/auto-association-l1.png)
 
-While Microsoft does not require nor recommend manual verification of auto associations, we have provided a tracking functionality for your organization should that be useful. Clicking on the blue sparkle symbol marks a room or peripheral as verified, turning the symbol's blue fill solid. Clicking on it again unverifies it. If a room is marked as verified, all of it's associated peripherals are also marked as verified.
+While Microsoft does not require nor recommend manual verification of auto associations, we have provided a tracking functionality for your organization should that be useful. Clicking on the blue sparkle symbol marks a room or peripheral as verified, turning the symbol's blue fill solid. Clicking on it again unverifies it. If a room is marked as verified, all of its associated peripherals are also marked as verified.
 
 Auto association requires that multiple unique users provide these signals in order to ensure accuracy. The threshold for how many signals it requires before associating is configurable, so you can decide the right balance of association speed and accuracy for your organization, with a minimum of five unique signals and no maximum.
 
