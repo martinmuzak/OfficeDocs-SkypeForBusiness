@@ -39,5 +39,4 @@ Using the Queues app on Teams phones lets users:
 - [Manage Queues app for Microsoft Teams](/microsoftteams/manage-queues-app)
 - [Use the Queues app for Microsoft Teams](https://support.microsoft.com/office/use-the-queues-app-for-microsoft-teams-370ad83e-c2c1-4a9f-8a59-16c98be102e9)  
 - [Planning for Auto Attendants and Call Queue authorized users](/microsoftteams/aa-cq-authorized-users-plan)  
-- [Policy assignment in Teams](microsoftteams/policy-assignment-overview)  
 - [Teams Premium licensing](/microsoftteams/teams-add-on-licensing/licensing-enhance-teams)
