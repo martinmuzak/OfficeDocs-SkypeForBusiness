@@ -3,7 +3,7 @@ title: Queues app on Teams phones
 author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
-ms.reviewer: 
+ms.reviewer: prashibadkur
 ms.date: 01/22/2025
 ms.topic: article
 ms.service: msteams
