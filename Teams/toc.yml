@@ -1626,7 +1626,7 @@ items:
                 - name: Update management
                   href: phones/remote-update-teams-phones.md
                 - name: Queues app on Teams phones
-                  href: phones/queues-app-teams-phones.md
+                  href: phones/queues-app.md
         - name: Deploy
           items:
             - name: Step 1 - Overview
