@@ -76,7 +76,7 @@ The following providers offer contact center solutions that are integrated into 
 | `Intermedia` | https://www.intermedia.com/integration/contact-center-for-microsoft-teams                       |
 | `IPDynamics` | https://www.ipdynamics.de/ |
 | `Landis Technologies` | https://landistechnologies.com/microsoft-teams-contact-center/                                          |
-| `Luware` | https://luware.com/en/solutions/                                                                                       |
+| `Luware` | https://luware.com/                                                                                       |
 | `Mida Solutions` | https://www.midasolutions.com/c3-cloud-contact-center-for-teams/                                        |
 | `Netcall` | https://www.netcall.com/platform/contact-centre/  |
 | `NICE inContact` | https://www.niceincontact.com/microsoft-teams                                                            |
