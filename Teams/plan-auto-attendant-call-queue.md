@@ -4,7 +4,7 @@ author: mkbond007
 ms.author: mabond
 manager: pamgreen
 ms.reviewer: colongma
-ms.date: 10/31/2024
+ms.date: 12/13/2024
 ms.topic: article
 ms.assetid: ab9f05a2-22cb-4692-a585-27f82d1b37c7
 ms.tgt.pltfrm: cloud
@@ -35,7 +35,7 @@ Auto attendants allow you to set up menu options to route calls based on caller 
 
 Call queues are waiting areas for callers. For situations where callers need to reach someone with a particular specialty--such as sales or service--rather than a specific person, you can use Call queues to connect callers to the group of agents who can assist them. Callers are put on hold until an agent assigned to the queue is available to take their call.
 
-Used together, Auto attendants and Call queues can easily route callers to the appropriate person or department in your organization.
+When Auto attendants and Call queues are used together, they can easily route callers to the appropriate person or department in your organization.
 
 ## Auto attendants
 
@@ -85,7 +85,7 @@ To configure Auto attendants and Call queues, you need the following resources:
 - A free [Microsoft Teams Phone Resource Account license](teams-add-on-licensing/virtual-user.md) for each resource account.
 - External phone calls:
   - At least one [Microsoft service number](getting-service-phone-numbers.md), [Operator Connect number](operator-connect-plan.md), [Direct Routing number](direct-routing-plan.md), or a hybrid number for each resource account that you want to be directly dialable from external phone numbers.
-    - The service number may also be a toll or toll-free number.
+    - The service number can also be a toll or toll-free number.
 - Web click-to-call:
   - [Contact centers with Azure Communication Services](/azure/communication-services/tutorials/contact-center)
   - [Quickstart: Join your calling app to a Teams auto attendant](/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-auto-attendant)
@@ -103,7 +103,7 @@ Agents who receive calls from a Call queue must be Enterprise Voice enabled onli
 
 If your agents are using the Microsoft Teams app for Call queue calls, they need to be in TeamsOnly mode.
 
-When using a resource account for calling line ID purposes in Call queues, the resource account must have a Teams Phone Resource Account license and one of the following assigned:
+If you're using a resource account for calling line ID purposes in Call queues, the resource account must have a Teams Phone Resource Account license and one of the following assigned:
 
 - A [Calling Plan](calling-plans-for-office-365.md) license and a phone number assigned.
 - An [Operator Connect](operator-connect-plan.md) phone number assigned.
@@ -126,10 +126,10 @@ You can nest Auto attendants and Call queues in two ways:
       - An [online voice routing policy](manage-voice-routing-policies.md).
         - Phone number assignment is optional when using Direct Routing.
 
-For more information, see [Nested Auto attendants and Call queues](#nested-auto-attendants-and-call-queues) for more details.
+For more information, see [Nested Auto attendants and Call queues](#nested-auto-attendants-and-call-queues).
 
 > [!NOTE]
-> If the Calling Plan assigned to the resource account becomes disabled or is removed, [Communications Credits](what-are-communications-credits.md), if available in the tenant (without being assigned to the resource account), will be consumed. If there is no Calling Plan or Communications Credits, the call will fail.
+> If the Calling Plan assigned to the resource account becomes disabled or is removed, [Communications Credits](what-are-communications-credits.md), if available in the tenant (without being assigned to the resource account), are consumed. Without a Calling Plan or Communication Credits, the call fails.
 >
 > Direct Routing service numbers for Auto attendant and Call queues are supported for Microsoft Teams users and call agents only.
 >
@@ -137,7 +137,7 @@ For more information, see [Nested Auto attendants and Call queues](#nested-auto-
 >
 > In a Hybrid scenario, the resource account must be created on-premises. For more information, see [Plan Cloud call queues](/skypeforbusiness/hybrid/plan-call-queue).
 >
-> New Commerce Experience customers are not yet supported for resources accounts when an auto attendant or call queue needs to transfer calls to an external number.
+> New Commerce Experience customers aren't supported yet for resource accounts when an auto attendant or call queue needs to transfer calls to an external number.
 
 ## Business decisions
 
@@ -185,11 +185,15 @@ Conference mode is enabled by default. If you have agents who don't meet the req
 
 ## Nested Auto attendants and Call queues
 
-The first Auto attendant or Call queue that answers a call requires a resource account and associated licensing. Nested auto attendants or call queues that receive calls that have already been answered by an auto attendant or call queue do not require resource accounts.
+The first Auto attendant or Call queue that answers a call requires a resource account and associated licensing. Nested auto attendants or call queues that receive calls that have already been answered by an auto attendant or call queue don't require resource accounts.
 
 Nesting without resource accounts is the recommended approach. This method eliminates the need to create and license additional resource accounts and makes auto attendant call flows and call queue exception handling flows easier to understand and maintain.
 
 However, there might be times when you require nesting with resource accounts. For example, when agents in a call queue receive a call, the information in the toast is determined by how the call arrived in the queue. If the call was transferred to the queue without a resource account, the agent receives the name of the call queue in the toast. If the call was transferred to the queue through a resource account, the agent receives the display name of the resource account.
+
+> [!IMPORTANT]
+> Nesting Auto attendants and Call queues without a resource account isn't currently supported for [Authorized users](aa-cq-authorized-users-plan.md) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
+>
 
 ## Click-to-call restrictions
 
@@ -197,7 +201,7 @@ In order to help prevent a denial of service attack from web based click-to-call
 
 ## Supported audio file formats
 
-When using a recorded audio file for prompts or music the supported formats are WAV (uncompressed, linear PCM (Pulse-code modulation) with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. 
+If you want to use a recorded audio file for prompts or music, the supported formats are WAV (uncompressed, linear PCM (Pulse-code modulation) with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. 
 
 The audio file content can't be larger than 5 MB.
 
@@ -205,6 +209,7 @@ The audio file content can't be larger than 5 MB.
 
 Once you complete the planning tasks in this article, follow these steps to get your Auto attendants and Call queues set up:
 
+1. [Plan your call flow routing](plan-your-call-routing-flow.md) to identify the number of resource accounts, auto attendants, call queues, and associated configuration items you need.
 1. Get a [Teams Phone Resource Account license](teams-add-on-licensing/virtual-user.md) for each resource account that you plan to create. These licenses are free, so we suggest getting a few extra in case you decide to make changes to your resource accounts in the future.
 1. [Create a resource account](manage-resource-accounts.md) for each Auto attendant and Call queue that you want to create.
 1. Assign a Teams Phone Resource Account license to each resource account.
@@ -236,7 +241,7 @@ See the following articles for information on how to create Auto attendants and 
 
 If you need more extensive capabilities, such as integration with workflows, bots, and SMS (Short Message Service), consider [Azure Communication Services](/azure/communication-services/overview).
 
-## Related topics
+## Related articles
 
 [Plan Direct Routing](direct-routing-plan.md)
 
