@@ -26,7 +26,7 @@ To set up and configure the Queues app for users in your organization, see [Mana
 
 Using the Queues app on Teams phones lets users:
 
-- They can view all call queues for authorized users can opt-in/opt-out all the call queues.  
+- They can view all call queues for authorized users can opt-in/opt-out all the call queues. 
 - They can interact with your team members grouped by opt in/opt out status. To initiate a call, they can select a team member from the menu.
 - They can place outgoing calls. In case when an organization has multiple outbound numbers to choose from, they can choose which number they want to use.
 - They can view past calls, including any calls they missed. They can select any call from the call history to see more detailed information and call that number back using the number associated with the call queue. Currently, call history includes the past calls they answered or a call notification when they miss a call and a voicemail message is left.
