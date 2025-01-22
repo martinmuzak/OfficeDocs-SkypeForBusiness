@@ -39,9 +39,9 @@ Bring Your Own Device rooms are identified as rooms with no Microsoft Teams Room
 
 The BYOD rooms management solution uses the core concept of **association** between room peripherals and room resource accounts to create manageability and drive value for your organization.
 
-A BYOD peripheral may be associated to a BYOD room in Pro Management portal. It cannot be associated to more than one room. This association is anchored around a peripheral ID, which is a combination of the peripheral's product ID, vendor ID, and serial number.
+A BYOD peripheral may be associated to a BYOD room in Pro Management portal. It can't be associated to more than one room. This association is anchored around a peripheral ID, which is a combination of the peripheral's product ID, vendor ID, and serial number.
 
-When a peripheral is associated to a BYOD room, the Teams client application on your users' computer will send device signals required to construct this peripheral ID along with usage and meeting information. This usage information is then treated as usage of the peripheral's associated BYOD room, if there is one.
+When a peripheral is associated to a BYOD room, the Teams client application on your users' computer will send device signals required to construct this peripheral ID along with usage and meeting information. This usage information is then treated as usage of the peripheral's associated BYOD room, if there's one.
 
 In addition, this association proves to the system that the peripheral is in a meeting room, allowing Teams to automatically activate BYOD end user experience features that optimize the client application for meeting room scenarios. [Learn more.](https://support.microsoft.com/en-us/office/use-shared-display-mode-in-meeting-rooms-a59c6886-9028-44da-a3cc-5563be40a214)
 
@@ -54,7 +54,7 @@ There are two manual ways and one automatic way in which this association can ha
 1. Let Pro management portal automatically associate peripherals for you
 
 > [!WARNING]
-> In order for a BYOD peripheral to be manageable in Pro Management portal, the serial number must be unique. Check with your peripheral manufacturer to see if the peripherals used in your organization satisfy this requirement. You may find that some are unique and some are not, varying by manufacturer and even device model or firmware version.
+> In order for a BYOD peripheral to be manageable in Pro Management portal, the serial number must be unique. Check with your peripheral manufacturer to see if the peripherals used in your organization satisfy this requirement. You may find that some are unique and some aren't, varying by manufacturer and even device model or firmware version.
 
 ## Viewing your BYOD Inventory
 
@@ -71,9 +71,9 @@ In the **Inventory** page, you'll find all the BYOD rooms and peripherals within
 The summary metrics show how many rooms of each type you have in your organization.
 
 > [!IMPORTANT]
-> A BYOD room is defined as any room that does not have a meeting enabled compute. In the Pro Management portal specifically, that means **any room that does not have a Microsoft Teams Room** or Surface Hub. These rooms may or may not have peripherals associated to them. These rooms are pulled from the Microsoft Admin Center and Exchange. A BYOD room that is hidden in the GAL will not appear in this view, nor is it manageable via the Pro Management portal.
+> A BYOD room is defined as any room that doesn't have a meeting enabled compute. In the Pro Management portal specifically, that means **any room that does not have a Microsoft Teams Room** or Surface Hub. These rooms may or may not have peripherals associated to them. These rooms are pulled from the Microsoft Admin Center and Exchange. A BYOD room that is hidden in the GAL won't appear in this view, nor is it manageable via the Pro Management portal.
 
-- The following table describes the columns in the **Rooms** view of the Inventory. The Monitored and Planned columns are not relevant for BYOD rooms.
+- The following table describes the columns in the **Rooms** view of the Inventory. The Monitored and Planned columns aren't relevant for BYOD rooms.
 
   | Column | Description |
   | --- | --- |
@@ -101,7 +101,7 @@ When you select a specific room, you'll see a new pane with two different pages,
 |Account |The room resource account associated with the room in Exchange|
 |Address |The physical address of the room (street, city, zip code, building, floor) |
 
-- **The Inventory tab** displays detailed information about the room's devices. "Manage assets" is not relevant for BYOD rooms.
+- **The Inventory tab** displays detailed information about the room's devices. "Manage assets" isn't relevant for BYOD rooms.
 
 | Column | Description |
 | --- | --- |
@@ -116,7 +116,7 @@ When you select a specific room, you'll see a new pane with two different pages,
 
 The Device page offers a flat, searchable list of both BYOD and Bookable desk peripherals.
 
-The peripherals are grouped by plug-in, which means if they are plugged in together, they are displayed as a group with the first device name as the primary device shown in the main table. When a peripheral is manually associated with a room, all of the other peripherals in its group also associate to that room.<br>
+The peripherals are grouped by plug-in, which means if they're plugged in together, they're displayed as a group with the first device name as the primary device shown in the main table. When a peripheral is manually associated with a room, all of the other peripherals in its group also associate to that room.<br>
 The **Number of devices** column shows the number of peripherals in the group.
 
 Select the device to either view more details about peripherals in that group, or manually associate that group to a BYOD room or bookable desk.
@@ -145,7 +145,7 @@ In order to ensure no personal peripherals get discovered or shown to admins, Pr
 
 You can use a custom script to get peripheral details from rooms to locate peripherals correctly and ensure they're mapped to the corresponding room resource account. The PowerShell script located [here](https://www.microsoft.com/en-us/download/details.aspx?id=106063) must be run with administrator permissions.
 
-For detailed step-by-step instructions, see [Get information for connected peripherals](../rooms/get-peripheral-information.md). After uploading information on peripherals, use the Inventory pages in the Pro Management portal to confirm they are associated to the correct BYOD rooms.
+For detailed step-by-step instructions, see [Get information for connected peripherals](../rooms/get-peripheral-information.md). After uploading information on peripherals, use the Inventory pages in the Pro Management portal to confirm they're associated to the correct BYOD rooms.
 
 ## Enabling automatic work location updates
 
@@ -159,7 +159,7 @@ An auto associated room or peripheral is denoted by the blue sparkle iconography
 
 ![Auto Association L1](media/bring-your-own-device/auto-association-l1.png)
 
-While Microsoft does not require nor recommend manual verification of auto associations, we have provided a tracking functionality for your organization should that be useful. Clicking on the blue sparkle symbol marks a room or peripheral as verified, turning the symbol's blue fill solid. Clicking on it again unverifies it. If a room is marked as verified, all of its associated peripherals are also marked as verified.
+While Microsoft doesn't require nor recommend manual verification of auto associations, we have provided a tracking functionality for your organization should that be useful. Clicking on the blue sparkle symbol marks a room or peripheral as verified, turning the symbol's blue fill solid. Clicking on it again unverifies it. If a room is marked as verified, all of its associated peripherals are also marked as verified.
 
 Auto association requires that multiple unique users provide these signals in order to ensure accuracy. The threshold for how many signals it requires before associating is configurable, so you can decide the right balance of association speed and accuracy for your organization, with a minimum of five unique signals and no maximum.
 
@@ -216,7 +216,7 @@ To see the call utilization view for each room, select the specific Bring Your O
 
 ### Turning off automatic discovery & usage data collection in the Teams client
 
-The Teams BYOD solution uses peripheral data crowdsourced from the Teams client application running on user's computers to discover peripherals as well as understand when those peripherals (and the rooms they are associated to) are used. No personally identifiable data is collected, but should you feel that this data collection is inappropriate for certain users or groups in your organization, you may use the following PowerShell commands to enable or disable BYOD data collection via a Teams policy setting, as well as get the current policy setting status, create a new policy, and remove a policy.
+The Teams BYOD solution uses peripheral data crowdsourced from the Teams client application running on user's computers to discover peripherals as well as understand when those peripherals (and the rooms they're associated to) are used. No personally identifiable data is collected, but should you feel that this data collection is inappropriate for certain users or groups in your organization, you may use the following PowerShell commands to enable or disable BYOD data collection via a Teams policy setting, as well as get the current policy setting status, create a new policy, and remove a policy.
 
 > [!WARNING]
 > Disabling this policy setting for certain users will cause BYOD and desk usage information to cease flowing to the service. The Teams BYOD and Desk solution requires peripheral data sent from users to calculate usage reports for peripherals, BYOD rooms, and desks.
