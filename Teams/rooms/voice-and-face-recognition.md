@@ -84,10 +84,10 @@ The language of the Teams app that is installed determines the voice enrollment 
 - zh-tw
 
 > [!NOTE]
-> There is no language requirement for face enrollment, but you need to create your voice profile before you can enroll your face.
+> There's no language requirement for face enrollment, but you need to create your voice profile before you can enroll your face.
 
 > [!IMPORTANT]
-> If the language you are looking for isn't supported for enrolling your voice, Microsoft is currently exploring fallback options.
+> If the language you're looking for isn't supported for enrolling your voice, Microsoft is currently exploring fallback options.
 
 ## Data handling
 
@@ -111,7 +111,7 @@ If users leave the organization, the customer data is deleted accordingly with t
 
 ## Admin settings
 
-Please connect to PowerShell and ensure you are running the latest version. For detailed instructions and the update command, refer to the [Install Microsoft Teams PowerShell ](/microsoftteams/teams-powershell-install) article.
+Please connect to PowerShell and ensure you're running the latest version. For detailed instructions and the update command, refer to the [Install Microsoft Teams PowerShell ](/microsoftteams/teams-powershell-install) article.
 
 Admins can turn on or off voice and face enrollment for specific users, or groups using the [Team meeting policy](/powershell/module/teams/set-csteamsmeetingpolicy). By default, voice and face enrollment is disabled for all users in the organization, but admins can change this setting using PowerShell:
 
@@ -186,11 +186,11 @@ Select **Export** to download your data. The data will be saved directly to your
 
 **Question:** Are voice and face enrollments available in GCCH and DOD?
 
-**Answer:** No, voice and face enrollments are currently available only up to GCC and are not available in GCCH or DOD environments.
+**Answer:** No, voice and face enrollments are currently available only up to GCC and aren't available in GCCH or DOD environments.
 
 **Question:** Can admins download end users' voice and face data?
 
-**Answer:** No, data export is managed directly by end users. Admins do not have access to export voice and face data, giving users full control over their profiles.
+**Answer:** No, data export is managed directly by end users. Admins don't have access to export voice and face data, giving users full control over their profiles.
 
 ## Related topics
 
