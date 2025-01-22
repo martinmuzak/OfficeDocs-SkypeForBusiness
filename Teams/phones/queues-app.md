@@ -22,7 +22,7 @@ description: Learn how to use the Queues app on Microsoft Teams phones.
 
 Queues app is a Microsoft Teams native solution designed to empower organizations to streamline their customer engagement. With the latest [release](https://support.microsoft.com/en-us/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2) update of Teams app version: 1449/1.0.94.2024122303 on Teams phones, the Queues app is now supported for Teams phones. In addition to Teams phones, Teams desktop, Mac, and Virtualized Desktop Infrastructure (VDI) clients are supported.
 
-To set up and configure the Queues app for users in your organization, see [Manage Queues app for Microsoft Teams - Microsoft Teams | Microsoft Learn](/microsoftteams/manage-queues-app).
+To set up and configure the Queues app for users in your organization, see [Manage Queues app for Microsoft Teams](/microsoftteams/manage-queues-app).
 
 Using the Queues app on Teams phones lets users:
 
