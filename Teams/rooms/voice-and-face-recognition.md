@@ -140,9 +140,10 @@ Set-CsTeamsMeetingPolicy -Identity -PolicyName -EnrollUserOverride Disabled
  
 
 > [!NOTE]
-> A new `csTeamsAIPolicy` for Microsoft Teams, now available via Microsoft PowerShell, will take effect in mid-January 2025. This policy will replace the existing enrollment setting in `csTeamsMeetingPolicy` and includes two settings: `EnrollFace` and `EnrollVoice`.
+> A new `csTeamsAIPolicy` for Microsoft Teams, now available via Microsoft PowerShell, will take effect in mid-February 2025. This policy will replace the existing enrollment setting in `csTeamsMeetingPolicy` and includes two settings: `EnrollFace` and `EnrollVoice`.
 > To help you get started, review:
-> - [Set-CsTeamsAIPolicy (MicrosoftTeamsPowerShell)](/powershell/module/teams/set-csteamsaipolicy)
+- [Set-CsTeamsAIPolicy (MicrosoftTeamsPowerShell)](/powershell/module/teams/set-csteamsaipolicy)
+
 Admins can manage how voice and face profiles are used to turn off Voice Isolation for users to enhance noise and voice background reduction admins can switch off voice isolation with PowerShell in the meeting policy.
 
 ```powershell
@@ -174,7 +175,7 @@ Select **Export** to download your data. The data will be saved directly to your
 **Answer:** Voice data is stored in the Office 365 trusted compliance store.
 
 **Question:** Can both users and admins control the data being saved?  
-**Answer:** Yes, both users and admins have control over the data being saved. Users are able to unenroll their voice. If users need to access their data, they would need to contact their admin. Users have full control of when to remove the data, and when a user selects unenroll from the Teams app, the data will be immediately deleted.
+**Answer:** Only the end user will be able to export their data. Users also are able to unenroll and remove their voice from the Teams app.
 
 **Question:** For how long do you keep the data?  
 **Answer:** The retention policy is one year. User's data will be deleted if it isn't used for one year.
