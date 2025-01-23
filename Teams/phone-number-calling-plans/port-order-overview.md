@@ -147,7 +147,7 @@ The following porting scenarios require multiple port orders:
 
 - **Ports with multiple service providers** - A number port wizard request supports porting from one service provider at a time. For example, if you have a site whose numbers you want to port over to Microsoft, and some of those phone numbers are provided by service provider "A" while other numbers are provided by service provider "B," then you place two separate port requests with the number port wizard, one for numbers with service provider "A" and another for numbers with service provider "B."
 - **Ports with multiple billing telephone numbers** - A number port wizard request supports porting numbers from one BTN at a time. For example, if your service provider groups your telephone numbers within multiple BTNs, then you need to place a separate port request for each set of numbers, respective to their parent BTN.
-- **Ports with multiple number types** - A number port wizard request supports porting one number type at a time. For example, if you have a site that has nine toll numbers assigned to individual users, and one toll-free number is used as an auto attendant, then you need to place two separate port requests with the number port wizard, one for the nine tolled numbers and another for the toll-free number.
+- **Ports with multiple number types** - A number port wizard request supports porting one number type at a time. For example, if you have a site that has nine toll numbers assigned to individual users, and one toll-free number is used as an auto attendant, then you need to place two separate port requests with the number port wizard, one for the nine toll numbers and another for the toll-free number.
 - **Ports with multiple addresses** - A number port wizard request supports porting numbers for one service address at a time. For example, if you have a port project to transfer numbers at multiple addresses on the same port date, then you'll need to place a separate port request per unique service address.
 
 > [!NOTE]
@@ -196,7 +196,7 @@ In this example, you can't submit port requests for Batch 1 and Batch 2 at the s
 Don't arrange to disconnect the service with your current service provider before submitting your port request.
 
 - Inactive or disconnected numbers can't be ported. Given the chance that a port might be rejected, don't arrange any service terminations with your current service provider until all of your porting activity is complete.
-- In a full port, the service with your current service provider is terminated automatically.
+- In a full port, the service with your current service provider might be terminated automatically, but it's best practice to work with the service provider to audit and ensure account closure.
 - Any other services (like ISDN/Broadband etc.) associated with your porting phone numbers is automatically disconnected after the port is completed. If you would like to keep these services active with your current service provider, transfer those services to phone numbers that you don't plan to port to Microsoft.
 
 ### What happens after you submit a port order request
@@ -361,22 +361,9 @@ With most service providers in all countries and regions where Microsoft offers 
 
 In the USA and Canada, you can choose any target porting time between 8am (U.S. Eastern Time) to 8pm (U.S. Eastern Time).
 
+Toll-Free number port times are scheduled starting at 11:30am (U.S. Eastern Time). If an earlier time is required, a special request can be submitted through the [Telephone Number Services - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
+
 - Choosing a target time late in the business day means that if something goes wrong and we need the help of the losing carrier to resolve the issue, you could have a scenario where we have to wait until the next business day for the issue to be resolved. For example, some service provider porting teams are only available until 5pm (Eastern Time) for support.
-
-## Managing numbers when moving from Microsoft Calling Plan to a different phone service provider
-
-If you're porting out your numbers from Teams to a different carrier, you must submit a request with the new carrier. You also need to set a porting PIN in the Teams admin center.
-
-- To define your porting PIN with Microsoft, navigate to the Teams admin center. Go to **Voice** > **Phone numbers**, and on the upper-right corner of the page, select **Actions** > **Manage porting PIN**, and then enter a 10-digit PIN.
-- When your new carrier contacts us with the porting request, we'll ask them to provide the PIN you defined.
-- If you need further assistance setting up a PIN, contact the [Telephone Number Services - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md)
-
-If you're moving your Public Switched Telephone Network (PSTN) access from Microsoft Calling Plan to a different PSTN connectivity service provider with new numbers but you aren't porting your Microsoft numbers, you can release the numbers back to Microsoft in one of two ways:
-
-- In Teams admin center, navigate to **Voice** > **Phone numbers**, select the number to release then select **Release**. Enter the displayed code to confirm the release of the number and again select **Release**.
-- For large quantities of numbers, follow the [Telephone Number Services - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md) guidance and create a new case, with case type selected as **Release telephone number - remove phone number from my tenant**.
-
-Removing Microsoft Calling Plan licenses doesn't automatically release the numbers back to Microsoft. Even with no entitlement to assign the reserved numbers, the reserved numbers must still be manually released back to Microsoft.
 
 ## Related topics
 
