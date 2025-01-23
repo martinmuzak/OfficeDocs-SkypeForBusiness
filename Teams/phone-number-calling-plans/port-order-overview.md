@@ -28,6 +28,8 @@ ms.collection:
 
 # What's a port order? - Planning to transfer telephone numbers to Teams
 
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Microsoft Calling Plans
+
 Number porting is the process of transferring your existing phone numbers from one service provider to another, allowing you to keep the same phone numbers even after changing service providers.
 
 You might have a scenario where you want to transfer numbers from your current service provider to Microsoft, so that they can be used with Microsoft Teams Calling Plans.
