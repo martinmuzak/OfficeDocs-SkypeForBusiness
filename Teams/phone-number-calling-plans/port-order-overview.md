@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: mikedav, roykuntz, jastark, leiaglezer
-ms.date: 11/28/2017
+ms.date: 01/22/2025
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -139,7 +139,7 @@ User numbers can be converted to service numbers, and vice versa, but not during
 Porting availability for Toll-free phone numbers vary by country and region. For more information, please refer to your country or region specific documents to see available support for porting service.
 
 > [!NOTE]
-> At this time in the United Kingdom, we currently don't support transferring UK nongeographic numbers including shared cost numbers for area codes 0843, 0844, 0845, 0870, 0871, 0872.
+> At this time in the United Kingdom, Microsoft currently doesn't support transferring UK nongeographic numbers including shared cost numbers for area codes 0843, 0844, 0845, 0870, 0871, 0872.
 
 ### How many port requests do I need?
 
@@ -237,7 +237,7 @@ The losing carrier then approves or denies the port request.
 ### Common mistakes
 
 Number porting is easy to do. However, if the order is incomplete, inaccurate, or missing information, your current service provider will reject the port request.
-Here are the most common mistakes we see customers make when they port numbers. Save yourself a port request rejection and double-check for these errors.
+Here are the most common mistakes Microsoft sees customers making when they port numbers.
 
 - Make sure the account information you give matches exactly what your phone carrier has on record. Mismatched information is the most common cause of errors and delays to your port order. Verify the following information is true:
   - Name or person authorized to make changes to the account is correct.
@@ -270,7 +270,7 @@ Browse through the following reference articles to find if the countries in your
 > - [Finland](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-finland)
 > - [France](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-france)
 > - [Germany](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-germany)
-> - [Hong Kong](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-hong-kong)   
+> - [Hong Kong](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-hong-kong)
 > - [Hungary](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-hungary)
 > - [Ireland](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-ireland)
 > - [Italy](/microsoftteams/phone-reference/manage-numbers/phone-number-management-for-italy)
@@ -312,15 +312,18 @@ Some service providers support placing accounts on a 'freeze' status, to protect
 
 If there's a freeze on your account, your port order is rejected, so confirm your account's status with the service provider. If frozen, remove the freeze before submitting your port order.
 
-### Plan for port request processing time
+### Plan lead-time for port request processing
 
-After submitting your port order request, it takes between 7-14 days to be processed. However, depending on your service provider it might take up to 30 days. After the phone numbers are ported over, you'll get an email from us to let you know that you're good to go.
+After submitting your port order request, it typically takes between 7-14 days to be processed, start to finish. Depending on your current service provider, it might take up to 30 days. After the phone numbers are ported over, you'll get an email from Microsoft's Telephone Number Services team to let you know about next steps.
 
 To check the status of your port order, in the left navigation of the Microsoft Teams admin center, go to **Voice** > **Phone numbers**, and then select **Order history**. Each port order status is listed in the Status column.
 
-- In the US, most ports can be completed in seven business days.
-- In Canada, most ports can be completed in 10 business days.
-- For requests over 200 phone numbers, it can take anywhere between 10-20 business days.
+- In the US, a minimum five-day lead time is required.
+- In Canada, a minimum ten-day lead time is required.
+- For requests over 200 phone numbers, expect additional time.
+
+> [!NOTE]
+> You can't choose a target porting date that is further than 30 (calendar) days out.
 
 ### Plan for port event date
 
@@ -343,14 +346,11 @@ With the conservative target date approach, you choose a target date that is at 
 
 When compared to Approach 1, the downside here's that your ports take longer to complete.
 
-However, the upside is that this approach builds in some buffer time in case we run into rejections and enables us to have higher confidence that the numbers port on your initial requested target date. While your ports do take longer, you don't have to deal with the hassle of recommunicating with your stakeholders and replanning your day-of-port activities.
+However, the upside is that this approach builds in some buffer time in case Microsoft's Telephone Number Services team runs into rejections and enables us to have higher confidence that the numbers port on your initial requested target date. While your ports do take longer, you don't have to deal with the hassle of recommunicating with your stakeholders and replanning your day-of-port activities.
 
 With Approach 2, you're choosing predictability over speed.
 
-At the end of the day, what approach you want to take is up to you. In our experience, customers greatly value predictability over speed and we at Microsoft also recommend Approach 2 for all your ports.
-
-> [!NOTE]
-> You can't choose a target porting date that is further than 30 (calendar) days out.
+Microsoft recommends Approach 2 for all your ports.
 
 ### Plan for port event to process during business hours
 
@@ -358,11 +358,11 @@ Service providers (including your current phone service provider and Microsoft) 
 
 With most service providers in all countries and regions where Microsoft offers Calling Plans, business hours are 9am to 5pm, in the time zone that their porting team is located.
 
-In the USA and Canada, you can choose any target porting time between 8am (U.S. Eastern Time) to 8pm (U.S. Eastern Time).
+For United States user numbers, you can choose any target porting time between 8am (U.S. Eastern Time) to 8pm (U.S. Eastern Time).
 
-Toll-Free number port times are scheduled starting at 11:30am (U.S. Eastern Time). If an earlier time is required, a special request can be submitted through the [Telephone Number Services - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
+For Canada numbers, including user and Toll-Free numbers, and for USA Toll-Free numbers, port times are scheduled at 11:30am (U.S. Eastern Time). If an earlier time is required, a special request can be submitted through the [Telephone Number Services - Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
 
-- Choosing a target time late in the business day means that if something goes wrong and we need the help of the losing carrier to resolve the issue, you could have a scenario where we have to wait until the next business day for the issue to be resolved. For example, some service provider porting teams are only available until 5pm (Eastern Time) for support.
+- Choosing a target time late in the business day means that if something goes wrong and Microsoft's Telephone Number Services team needs the help of the losing service provider to resolve the issue, you could have a scenario where Microsoft must wait until the next business day for the issue to be resolved. For example, some service provider porting teams are only available until 5pm (Eastern Time) for support.
 
 ## Related topics
 
