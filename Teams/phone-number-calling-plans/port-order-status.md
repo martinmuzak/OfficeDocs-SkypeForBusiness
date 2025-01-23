@@ -3,8 +3,8 @@ title: What's the status of your port orders?
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
-ms.reviewer: mikedav, roykuntz, jastark
-ms.date: 11/28/2017
+ms.reviewer: mikedav, roykuntz, jastark, leiaglezer
+ms.date: 01/22/2025
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
