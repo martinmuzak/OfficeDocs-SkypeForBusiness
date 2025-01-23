@@ -1249,8 +1249,6 @@ items:
                   href: phone-number-calling-plans/manually-submit-port-order.md
                 - name: What's the status of your port orders?
                   href: phone-number-calling-plans/port-order-status.md
-                - name: Manage number assignments during a port
-                  href: phone-number-calling-plans/port-event-number-management.md
             - name: Supported rate centers and coverage
               href: phone-number-calling-plans/supported-rate-centers-coverage-matrix.md
         
