@@ -40,7 +40,7 @@ You originate your port order with Microsoft and Microsoft manages the port orde
 
 When the numbers are ported over, you can assign those phone numbers to your users and services such as audio conferencing (for conference bridges), auto attendants, and call queues.
   
-After you port your phone numbers over to Teams, Microsoft becomes your service provider and you can disconnect your service with your old service provider or carrier.
+After you port your phone numbers over to your Microsoft Teams Calling Plan, Microsoft becomes your service provider and you can disconnect your service with your old service provider or carrier.
 
 This article provides considerations and guidance for planning and ensuring a successful number port project when [Submitting a port request](transfer-phone-numbers-to-teams.md).
   
@@ -70,7 +70,7 @@ These terms are applicable in the United States and alternative terms might be u
 - **Account Number**
   - The account number associated with the phone numbers that you're trying to port.
   - If you're currently invoiced through a reseller, you'll provide the name of the reseller in the Letter of Authorization.
-  - All phone numbers in a port request using the Teams admin center MUST belong to the same account number. See [Port request considerations](#port-request-considerations)
+  - All phone numbers in a port request using the Teams admin center (TAC) MUST belong to the same account number. See [Port request considerations](#port-request-considerations)
 
 - **Authorizing person on account**
   - A person in your organization who is the authorized user on your account with your current service provider.
@@ -124,7 +124,7 @@ In general, you can transfer any phone number that's from a supported provider.
 - Fax numbers, but they can't be used for faxing. They have to be assigned to a user. If you port the phone number to Teams, you can assign this phone number to a user in your organization instead of using it for faxing.
 - If you're porting hybrid phone numbers (migrating from Direct Routing or Operator Connect to Calling Plans), contact the [TNS service desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md) and include a note stating these phone numbers are hybrid.
 
-Transferring mobile numbers to Microsoft Calling Plan is only available in the United States and Puerto Rico.
+Transferring mobile numbers to Microsoft Calling Plan is only available in the United States, Puerto Rico, and Canada.
 
 User numbers can be converted to service numbers, and vice versa, but not during the port process. Once a number is ported to Microsoft, the usage type can be changed. See [Managing the usage type of a Calling Plan number](../manage-the-usage-of-a-phone-number.md).
 
@@ -199,7 +199,7 @@ Don't arrange to disconnect the service with your current service provider befor
 
 - Inactive or disconnected numbers can't be ported. Given the chance that a port might be rejected, don't arrange any service terminations with your current service provider until all of your porting activity is complete.
 - In a full port, the service with your current service provider might be terminated automatically, but it's best practice to work with the service provider to audit and ensure account closure.
-- Any other services (like ISDN/Broadband etc.) associated with your porting phone numbers is automatically disconnected after the port is completed. If you would like to keep these services active with your current service provider, transfer those services to phone numbers that you don't plan to port to Microsoft.
+- Any other services (like ISDN/Broadband etc.) associated with your porting phone numbers is automatically disconnected after the port is completed. If you would like to keep these services active with your current service provider, transfer those services to phone numbers that you don't plan to port to Microsoft Teams Calling Plans.
 
 ### What happens after you submit a port order request
 
@@ -212,7 +212,6 @@ When placing a port request, you're asked to choose a target porting date and ti
 Once you submit your request to port your phone numbers to Microsoft, the following events take place:
 
 - Microsoft takes your request and submits it to the service provider that currently owns your phone numbers (the losing service provider).
-  - Different service providers have different porting rules when it comes to how they expect porting service providers to submit port requests to them. Service provider A might have a GUI, service provider B might have APIs, and service provider C might expect all port requests to be sent to them via email.
   - Microsoft submits your port request to the losing service provider, based on their business rules.
 - Once a port request reaches the losing service provider, they have a window of time to process the request and provide a response.
   - The response SLA varies by country or region. For example, the losing service provider response SLA in the United States is 3-5 business days, and 5-7 business days in Canada.
@@ -223,13 +222,11 @@ Once you submit your request to port your phone numbers to Microsoft, the follow
 The losing carrier then approves or denies the port request.
 
 - **Approval**:
-  - The losing service provider scrutinized the account information you provided, looked through the porting numbers, and found that all the information in your port request matches with what they have on file for the account and they agree to the proposed date for the port event.
   - The losing service provider responds to Microsoft, acknowledging compliance with the request, which is known as a **firm order commitment** (FOC).
     - In rare cases, a losing service provider can override any firm order commitment that they sent.
   - On the date of the firm order commitment, the losing service provider releases their numbers to Microsoft, and Microsoft directs the numbers to your tenant.
 
 - **Rejection**:
-  - The losing service provider scrutinized the account information you provided, looked through the porting numbers, and found one or more inconsistencies. Or they can't turn around the order in the requested time frame.
   - In their response to us, the losing service provider indicates reasons for rejecting the port request.
   - In a rejected port request, the losing carrier stops processing that request until the request is fixed resubmitted.
     - Upon resubmitting an updated port request to the losing carrier, the response SLA is reset and starts over.
