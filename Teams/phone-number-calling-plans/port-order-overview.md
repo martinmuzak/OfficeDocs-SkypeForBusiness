@@ -184,7 +184,7 @@ Port requests for the same account number are only processed *one at a time*, in
 
 For example, you have account number xyz123 with your current service provider with the following plans:
 
-- Account xyz123 has 10 telephone numbers (TNs) under it - TN1, TN2, TN3….TN10.
+- Account xyz123 has 10 telephone numbers (TNs) under it: TN1, TN2, TN3, ... TN10.
 - Assume you want to port these numbers in 2 batches
   - Batch 1 - TN1, TN2, TN3, TN4, TN5
     - This is a partial-port, with BTN remaining with current provider.
@@ -331,7 +331,7 @@ When it comes to choosing your target porting date, you can choose an aggressive
 
 #### Approach 1: Choosing an aggressive target date
 
-With the aggresive target date approach, you choose a target date that is only a few business days away from your date of submission. Any target date less than seven business days away (US) / 10 business days away (Canada) from your date of submission can be considered an aggressive target date.
+With the aggressive target date approach, you choose a target date that is only a few business days away from your date of submission. Any target date less than seven business days away (US) / 10 business days away (Canada) from your date of submission can be considered an aggressive target date.
 
 The upside of this is that if all the information in your port request is accurate, and if the losing carrier can process your request in time, then your ports can be completed quickly.
 
