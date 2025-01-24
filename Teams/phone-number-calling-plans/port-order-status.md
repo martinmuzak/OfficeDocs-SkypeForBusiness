@@ -30,9 +30,9 @@ ms.collection:
 
 To see the status of your port order, in the left navigation of the Microsoft Teams admin center, go to  > **Voice** > **Phone numbers**, and then select **Order history**. Each port order status is listed in the **Status** column.
 
-If the **Status** column is not listed, select the gear-shaped setting icon in the **Order history** table, and enable the **Status** column.
+If the **Status** column isn't listed, select the gear-shaped setting icon in the **Order history** table, and enable the **Status** column.
 
-You can view orders that are saved but not submitted, and orders that are submitted and in progress by selecting the order name. Completed and canceled orders are not viewable, but are included in the list for record-keeping.
+You can view orders that are saved but not submitted, and orders that are submitted and in progress by selecting the order name. Completed and canceled orders aren't viewable, but are included in the list for record-keeping.
 
 Keep in mind the lead times for order processing, as described in [Port planning](port-order-overview.md).
 
