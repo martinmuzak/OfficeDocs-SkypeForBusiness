@@ -34,9 +34,11 @@ If the **Status** column is not listed, select the gear-shaped setting icon in t
 
 You can view orders that are saved but not submitted, and orders that are submitted and in progress by selecting the order name. Completed and canceled orders are not viewable, but are included in the list for record-keeping.
 
-If you need help or if you need to inquire about an existing order, contact the [TNS Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
+Keep in mind the lead times for order processing, as described in [Port planning](port-order-overview.md).
 
-When contacting the TNS Service Desk about an existing order, be sure to navigate to existing cases, select the existing case, and provide your inquiry in the case comments, rather than opening a new case about the existing order.
+If you need to inquire about an existing order, use the [Phone Number Service Center Portal](https://pstnsd.powerappsportals.com/) to contact the [Telephone Number Services (TNS) Service Desk](../manage-phone-numbers-for-your-organization/contact-tns-service-desk.md).
+
+When making an inquiry about an existing port request, find the related case for your order in the Phone Number Service Center Portal and provide your inquiry in the case comments, rather than opening a new case.
 
 ## Related articles
 
