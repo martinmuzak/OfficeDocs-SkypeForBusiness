@@ -76,7 +76,7 @@ Additionally, lock down policies are applied to limit nonadministrative features
 
 Microsoft Defender is enabled out of the box. The Teams Rooms Pro license also includes Defender for Endpoint, which allows customers to enroll their Teams Rooms into Defender for Endpoint. This enrollment can provide security teams visibility into the security posture of Teams Room on Windows devices from the Defender portal. Teams Rooms on Windows can be enrolled following the steps for [Windows devices](/microsoft-365/security/defender-endpoint/onboarding-endpoint-manager). We don't recommend modifying Teams Rooms using protection rules (or other Defender policies that make configuration changes) as these policies can impact Teams Rooms functionality; however, reporting functionality into the portal is supported.
 
-Microsoft Bitlocker is not enabled out of the box, but can be enable via policy if desired. Ensure Bitkocker is enabled without a preboot authentication or the Teams Room will not boot to a functional device without manually entry of a PIN which will impact usability of the room system.
+Microsoft Bitlocker is not enabled out of the box, but can be enable via policy if desired. Ensure Bitlocker is enabled without a preboot authentication or the Teams Room will not boot to a functional device without manually entry of a PIN which will impact usability of the room system.
 
 ## Account Security
 
@@ -257,6 +257,6 @@ We strongly recommend that you connect your Teams Rooms devices to a wired netwo
 
 Proximity Join, Better Together, Teams Cast, and pairing of Teams panels rely on Bluetooth. Bluetooth technology use on Teams Rooms on Android devices is currently limited to advertising beacons and prompted proximal connections. The `ADV_NONCONN_INT` protocol data unit (PDU) type is used in the advertising beacon. This PDU type is for nonconnectable devices advertising information to the listening device. There's no Bluetooth device pairing as part of these features. More details on Bluetooth protocols can be found on the Bluetooth SIG website.
 
-Teams Phones and Displays offers Bluetooth pairing capability to pair with headsets using the Bluetooth Hands-Free Profile.
+Teams Phones and Displays offer Bluetooth pairing capability to pair with headsets using the Bluetooth Hands-Free Profile.
 
 For more information on security in Microsoft Teams, see [Security and Microsoft Teams](/microsoftteams/teams-security-guide).  
