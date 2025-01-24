@@ -26,6 +26,8 @@ ms.collection:
 
 # What's the status of your port orders?
 
+**APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Microsoft Calling Plans
+
 To see the status of your port order, in the left navigation of the Microsoft Teams admin center, go to  > **Voice** > **Phone numbers**, and then select **Order history**. Each port order status is listed in the **Status** column.
 
 If the **Status** column is not listed, select the gear-shaped setting icon in the **Order history** table, and enable the **Status** column.
