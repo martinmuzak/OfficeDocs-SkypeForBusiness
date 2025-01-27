@@ -125,7 +125,7 @@ Teams admins and organizers have different policies and settings to control the 
 
 |Feature|Admins|Organizers|
 |:------|:-----|:---------|
-|[Announce when callers join or leave](turn-on-or-off-entry-and-exit-announcements-for-meetings-in-teams.md)|Control whether an entry and exit announcement is played when participants who dialed into the meeting join or leave.|No control.|
+|[Announce when callers join or leave](turn-on-or-off-entry-and-exit-announcements-for-meetings-in-teams.md)|Control whether an entry and exit announcement is played when participants who dialed into the meeting join or leave.|No control|
 |[Anonymous participants](anonymous-users-in-meetings.md)|Manage how anonymous attendees access Teams meetings in your org.|**(Public preview)** can prevent anonymous users from joining specific meetings if admin allows.|
 |[Anonymous users can join a meeting after verifying (Teams Premium- Public preview)](anonymous-users-in-meetings.md#anonymous-users-can-join-a-meeting-after-verifying-with-an-email-code-public-preview-for-teams-premium)|**(Public preview)** Manage whether anonymous users can verify themselves with a one-time passcode to join meetings in your org.|**(Public preview)** If admin allows, can require anonymous to verify themselves with a one-time passcode to join specific meetings.|
 |[Attendance and engagement reports](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)|Can enforce on or off or allow organizer to choose.|Can turn on or off if allowed by admin.|
