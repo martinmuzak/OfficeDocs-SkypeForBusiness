@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: eviegrimshaw
-ms.date: 01/27/2024  
+ms.date: 01/27/2025  
 ms.topic: article
 audience: Admin
 appliesto: 
@@ -53,7 +53,7 @@ To set up and use Bookable Desks in your organization, you must perform these ta
 
 Desk pool accounts, known as **'workspaces'** in Exchange, are slightly different from room accounts. The capacity of a desk pool represents the number of seats in that pool and is set by the admin. The pool can be reserved by multiple users at the same time until all seats (the capacity) are taken. For example, the capacity on a desk pool is set to 2. User A and User B are both able to reserve it from 8am to 5pm, and the remaining capacity will be 0. This means that a third user won't be able to reserve it between 8am and 5pm.
 
-To create a desk pool account, you'll need to set up the workspace resource account in Exchange. We recommend following the steps outlined in [Configure desk booking](/microsoft-365/places/configure-desk-booking?branch=main#configure-desk-pools).
+To create a desk pool account, you need to set up the workspace resource account in Exchange. We recommend following the steps outlined in [Configure desk booking](/microsoft-365/places/configure-desk-booking?branch=main#configure-desk-pools).
 
 After you create the account, allow 24 to 48 hours for the account to appear in Outlook, Teams, and Teams Rooms Pro Management Portal.
 
@@ -81,9 +81,9 @@ The top metrics listed are described in the following table:
 | -------- | -------- |
 |Total associated desks|The total number of device groups associated to all desk pools.|
 |Total unused desk pools|The total number of desk pools that have 0% utilization.|
-|Unplanned reservations|The percentage of reservations across all desk pools that were not planned in advance and were auto-booked. |
+|Unplanned reservations|The percentage of reservations across all desk pools that weren't planned in advance and were autobooked. |
 
-Below the top metrics, there is a table that provides a granular breakdown of each desk pool, accompanied by specific metrics that highlight the usage of each. You can adjust the time filter to view usage over different time periods. 
+Below the top metrics, there's a table that provides a granular breakdown of each desk pool, accompanied by specific metrics that highlight the usage of each. You can adjust the time filter to view usage over different time periods. 
 
 | Column| Description|
 | -------- | -------- |
@@ -91,7 +91,7 @@ Below the top metrics, there is a table that provides a granular breakdown of ea
 |Utilization   | The percentage of time users were plugged into associated desks during business hours in the given time period.|
 |Associated desks|The number of device groups associated to this desk pool, out of the total capacity set on this desk pool.|
 |Reservations|The number of reservations across bookable desks in the selected time period.|
-|Unplanned reservations|The percentage of reservations that were not planned in advance and were auto-booked.|
+|Unplanned reservations|The percentage of reservations that weren't planned in advance and were autobooked.|
 |Reservation occupancy|The percentage of time users spent plugged into bookable desks during reservations. Lower values indicate more reservations were spent with less time plugged in.|
 
 ## Frequently asked questions
@@ -118,11 +118,11 @@ Below the top metrics, there is a table that provides a granular breakdown of ea
 
 **Question: Is there another way I can associate my devices other than the PowerShell script?**
 
-**Answer**: Yes, there is! You can also associate the device manually through Pro Management portal. Navigate to **Planning > Inventory > Devices >** select on an unassociated device (one with a 'Needs action' tag) > select on 'Add device to a room or desk' > search for the desired desk pool you'd like to assign the device to. To make it easier to discover devices, they'll be automatically discovered using your users' Teams app. Once five unique users have plugged into a device on a desk, it will automatically surface in the **Devices** tab for association.
+**Answer**: Yes, there is! You can also associate the device manually through Pro Management portal. Navigate to **Planning > Inventory > Devices >** select on an unassociated device (one with a 'Needs action' tag) > select on 'Add device to a room or desk' > search for the desired desk pool you'd like to assign the device to. To make it easier to discover devices, they are automatically discovered using your users' Teams app. Once five unique users have plugged into a device on a desk, it will automatically surface in the **Devices** tab for association.
 
 **Question: What do I need to access usage reports?**
 
-**Answer:** These reports are currently in preview and do not require a license to access. 
+**Answer:** These reports are currently in preview and don't require a license to access. 
 
 ## Related links
 
