@@ -9,7 +9,6 @@ metadata:
   services: skype-for-business-online-admin
   ms.service: skype-for-business-online #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  ms.service: skype-for-business # Required; service name, e.g. exchange, sharepoint, intune, skype-for-business, yammer, etc.
   search.appverid: MET150
   ms.tgt_pltfrm: na
   ms.devlang: na
