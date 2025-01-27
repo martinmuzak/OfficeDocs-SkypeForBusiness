@@ -27,7 +27,7 @@ Connectors in Microsoft Teams deliver content and service updates directly from 
 
 Teams and Microsoft 365 groups use connectors. You can use the same connectors in Teams and Microsoft Exchange.
 
-Any team member can add a connector to a channel, if the team permissions allow it. The updates from the service, that the connector fetches information from, notifies all the team members. Any team member with the permissions to add or remove can modify connectors setup done by other members.
+Any team member can add a connector to a channel, if the team permissions allow it. The updates from the service, that the connector fetches information from, notifies all the team members.
 
 > [!IMPORTANT]
 > Developers can't register new connectors on the [Connector developer portal](https://aka.ms/connectorsdashboard).
