@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: eviegrimshaw
-ms.date: 07/01/2024  
+ms.date: 01/27/2024  
 ms.topic: article
 audience: Admin
 appliesto: 
@@ -79,20 +79,20 @@ The top metrics listed are described in the following table:
 
 |Metrics| Definition|
 | -------- | -------- |
-|Total associated desks|The total number of device groups associated to all desk pools|
-|Total unused desk pools|The total number of desk pools that have 0% utilization  |
-|Unplanned reservations|The percentage of reservations across all desk pools that were not planned in advance and were auto-booked |
+|Total associated desks|The total number of device groups associated to all desk pools.|
+|Total unused desk pools|The total number of desk pools that have 0% utilization.|
+|Unplanned reservations|The percentage of reservations across all desk pools that were not planned in advance and were auto-booked. |
 
 Below the top metrics, there is a table that provides a granular breakdown of each desk pool, accompanied by specific metrics that highlight the usage of each. You can adjust the time filter to view usage over different time periods. 
 
 | Column| Description|
 | -------- | -------- |
-|Display name|The name of the desk pool   |
-|Utilization   | The percentage of time users were plugged into associated desks during business hours in the given time period|
-|Associated desks|The number of device groups associated to this desk pool, out of the total capacity set on this desk pool|
-|Reservations|The number of reservations across bookable desks in the selected time period|
-|Unplanned reservations|The percentage of reservations that were not planned in advance and were auto-booked|
-|Reservation occupancy|The percentage of time users spent plugged into bookable desks during reservations. Lower values indicate more reservations were spent with less time plugged in|
+|Display name|The name of the desk pool.|
+|Utilization   | The percentage of time users were plugged into associated desks during business hours in the given time period.|
+|Associated desks|The number of device groups associated to this desk pool, out of the total capacity set on this desk pool.|
+|Reservations|The number of reservations across bookable desks in the selected time period.|
+|Unplanned reservations|The percentage of reservations that were not planned in advance and were auto-booked.|
+|Reservation occupancy|The percentage of time users spent plugged into bookable desks during reservations. Lower values indicate more reservations were spent with less time plugged in.|
 
 ## Frequently asked questions
 
