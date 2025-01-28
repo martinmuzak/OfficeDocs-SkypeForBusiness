@@ -248,7 +248,7 @@ If you want to create a custom policy, complete the following steps:
 1. Adjust the settings as you need.
 1. Select **Save**.
 
-:::image type="content" source="./media/external-access-policy-tac.png" alt-text="A screenshot of the external access policy page in the Teams admin center.":::
+:::image type="content" source="./media/external-access-policy-tac.png" alt-text="A screenshot of the external access policy page in the Teams admin center."lightbox="./media/external-access-policy-tac.png":::
 
 You can then assign this policy to specific users or groups. To learn how to assign and remove policies to users and groups, see [Assign policies to users and groups](assign-policies-users-and-groups.md).
 
