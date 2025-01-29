@@ -60,7 +60,7 @@ To update the URL, follow these steps:
       :::image type="content" source="media/connectors-update-url.png" alt-text="Screenshot showing the option to update a webhook URL.":::
 
         > [!NOTE]
-        > If the **Update URL** button is greyed out and you're unable to update the URL, create a new connector.
+        > If the **Update URL** button is greyed out and you're unable to update the URL, create a new connector configuration.
 
    * For other types of connectors, remove the connector and recreate the connector configuration.
 
